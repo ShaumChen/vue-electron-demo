@@ -1,5 +1,8 @@
 <template>
+
   <div id="wrapper">
+    <header-bar>
+    </header-bar>
     <img id="logo" src="~@/assets/logo.png" alt="electron-vue">
     <main>
       <div class="left-side">
@@ -31,10 +34,11 @@
 
 <script>
   import SystemInformation from './LandingPage/SystemInformation'
+  import HeaderBar from './layout/HeaderBar'
 
-  export default {
+export default {
     name: 'landing-page',
-    components: { SystemInformation },
+    components: { HeaderBar, SystemInformation },
     methods: {
       open (link) {
         this.$electron.shell.openExternal(link)
